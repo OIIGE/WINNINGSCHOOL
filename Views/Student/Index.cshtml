@@ -1,0 +1,90 @@
+﻿@model List<ATTWOOLSCHOOL.Models.StudentViewModel>
+
+@{
+    ViewData["Title"] = "Student Details";
+    var successMessage = TempData["successMessage"]?.ToString();
+    var errorMessage = TempData["errorMessage"]?.ToString();
+}
+<h3>@ViewData["Title"]</h3>
+@if (!string.IsNullOrWhiteSpace(@successMessage))
+{
+    <div class="alert alert-success">
+        <strong> Successful! </strong>@successMessage
+    </div>
+    <button type="button" class="btn-close float-end" data-bs-dismiss="alert"></button>
+
+}
+
+else if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger">
+        <strong>
+            Error!
+        </strong> @errorMessage
+    </div>
+    <button type="button" class="btn-close float-end" data-bs-dismiss="alert"></button>
+
+}
+<form>
+    <button asp-action="Create" asp-controller="Student" class="btn btn-primary mb-4">Create</button>
+    <table class="table table-responsive table-hover table-bordered">
+    <thead>
+        <tr class="table-active" >
+            <th class="text-center">Id</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Date of Birth</th>
+            <th class="text-center">State of Origin</th>
+            <th class="text-center">Address</th>
+            <th class="text-center">Parent Name</th>
+            <th class="text-center">Parent Address</th>
+            <th class="text-center">Phone Number</th>
+            <th class="text-center">Guidance Email</th>
+            <th class="text-center">Enrollment Date</th>
+            <th class="text-center">Action</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+
+            @if (Model != null && Model.Any())
+            { 
+                @foreach (var Student in Model)
+                {
+                <tr>
+                    <td class="text-center">@Student.Id</td>
+                    <td>@Student.FullName</td>
+                    <td class="text-center">@Student.DateOfBirth.ToString("dd/MM/yyyy")</td>
+                    <td class="text-center">@Student.StateOfOrigin</td>
+                    <td class="text-center">@Student.Address</td>
+                    <td class="text-center">@Student.ParentFullName</td>
+                    <td class="text-center">@Student.ParentAddress</td>
+                    <td class="text-center">@Student.ParentPhoneNumber</td>
+                    <td class="text-center">@Student.GuidanceEmail</td>
+                    <td class="text-center">@Student.EnrollmentDate.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a asp-controller="Employee" asp-action="Edit" asp-route-id="@Student.Id"
+                               class="btn btn-primary"> Edit </a>
+
+                            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Student.Id"
+                               class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="12">
+                    <div>
+                        No Student available at the moment!
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+  
+</table>
+</form>
