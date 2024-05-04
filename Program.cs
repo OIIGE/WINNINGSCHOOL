@@ -1,4 +1,4 @@
-using ATTWOOLSCHOOL.EmployeeDbContext;
+using WINNINGSCHOOL.AttwoolContext;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 //Create Dependency Injection
 
-builder.Services.AddDbContext<AttwoolDbbContext>(options =>
+builder.Services.AddDbContext<WinningSchoolDbbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 var app = builder.Build();

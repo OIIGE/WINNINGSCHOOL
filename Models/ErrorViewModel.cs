@@ -1,4 +1,4 @@
-namespace ATTWOOLSCHOOL.Models
+namespace WINNINGSCHOOL.Models
 {
     public class ErrorViewModel
     {

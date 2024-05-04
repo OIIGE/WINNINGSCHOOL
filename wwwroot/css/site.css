@@ -20,3 +20,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+div.carousel-inner {
+    max-width: 100%;
+    height: auto;
+}

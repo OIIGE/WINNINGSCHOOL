@@ -1,8 +1,8 @@
-using ATTWOOLSCHOOL.Models;
+using WINNINGSCHOOL.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ATTWOOLSCHOOL.Controllers
+namespace WINNINGSCHOOL.Controllers
 {
     public class HomeController : Controller
     {

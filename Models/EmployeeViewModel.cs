@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ATTWOOLSCHOOL.Models
+namespace WINNINGSCHOOL.Models
 {
     public class EmployeeViewModel
     {

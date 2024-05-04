@@ -1,4 +1,4 @@
-﻿@model List<ATTWOOLSCHOOL.Models.StudentViewModel>
+﻿@model List<WINNINGSCHOOL.Models.StudentViewModel>
 
 @{
     ViewData["Title"] = "Student Details";
@@ -36,8 +36,8 @@ else if (!string.IsNullOrWhiteSpace(errorMessage))
             <th class="text-center">State of Origin</th>
             <th class="text-center">Address</th>
             <th class="text-center">Parent Name</th>
-            <th class="text-center">Parent Address</th>
             <th class="text-center">Phone Number</th>
+            <th class="text-center">Parent Address</th>
             <th class="text-center">Guidance Email</th>
             <th class="text-center">Enrollment Date</th>
             <th class="text-center">Action</th>
@@ -58,16 +58,16 @@ else if (!string.IsNullOrWhiteSpace(errorMessage))
                     <td class="text-center">@Student.StateOfOrigin</td>
                     <td class="text-center">@Student.Address</td>
                     <td class="text-center">@Student.ParentFullName</td>
-                    <td class="text-center">@Student.ParentAddress</td>
                     <td class="text-center">@Student.ParentPhoneNumber</td>
+                    <td class="text-center">@Student.ParentAddress</td>
                     <td class="text-center">@Student.GuidanceEmail</td>
                     <td class="text-center">@Student.EnrollmentDate.ToString("dd/MM/yyyy")</td>
                     <td>
                         <div class="btn-group btn-group-sm">
-                            <a asp-controller="Employee" asp-action="Edit" asp-route-id="@Student.Id"
+                            <a asp-controller="student" asp-action="Edit" asp-route-id="@Student.Id"
                                class="btn btn-primary"> Edit </a>
 
-                            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Student.Id"
+                            <a asp-controller="student" asp-action="Delete" asp-route-id="@Student.Id"
                                class="btn btn-danger">Delete</a>
                         </div>
                     </td>

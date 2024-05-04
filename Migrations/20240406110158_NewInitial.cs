@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ATTWOOLSCHOOL.Migrations
+namespace WINNINGSCHOOL.Migrations
 {
     /// <inheritdoc />
     public partial class NewInitial : Migration

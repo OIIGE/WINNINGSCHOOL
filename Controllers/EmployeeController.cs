@@ -1,16 +1,16 @@
-﻿using ATTWOOLSCHOOL.EmployeeDbContext;
-using ATTWOOLSCHOOL.Models;
-using ATTWOOLSCHOOL.Models.DbEntities;
+﻿using WINNINGSCHOOL.AttwoolContext;
+using WINNINGSCHOOL.Models;
+using WINNINGSCHOOL.Models.DbEntities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ATTWOOLSCHOOL.Controllers
+namespace WINNINGSCHOOL.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly AttwoolDbbContext _context;
+        private readonly WinningSchoolDbbContext _context;
 
         //INitialise Employee Dbcontext
-        public EmployeeController(AttwoolDbbContext context)
+        public EmployeeController(WinningSchoolDbbContext context)
         {
             this._context = context;
         }

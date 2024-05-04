@@ -1,4 +1,4 @@
-﻿@model ATTWOOLSCHOOL.Models.EmployeeViewModel
+﻿@model WINNINGSCHOOL.Models.EmployeeViewModel
 @{
     ViewData["Title"] = "Create Employee";
     var errorMessage = TempData["errorMessage"]?.ToString();
@@ -45,7 +45,7 @@
         <label class="form-label"> Phone Number</label>
         <div class="input-group">
             <span class="input-group-text">+234</span>
-            <input type="number" class="form-control" asp-for="PhoneNumbers" />
+            <input type="text" class="form-control" asp-for="PhoneNumbers" />
             <span asp-validation-for="PhoneNumbers" class="text-danger"></span>
         </div>
     </div>
