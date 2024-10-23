@@ -1,0 +1,155 @@
+/*Homepage CSS*/
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+
+
+body {
+    margin-top: 56px;
+    margin-bottom: 60px;
+    background: no-repeat center fixed url('../images/winbackground2.jpg');
+    background-size: cover;
+    width: 100%;
+   
+}
+
+div.carousel-inner {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+div.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+div.staffrow {
+    background-color: transparent;
+    animation-name: example;
+    animation-duration: 7s;
+    animation-direction: reverse;
+}
+
+@keyframes example {
+    from {
+        background-color: transparent; left:0px;
+        top: 0px;
+        
+    }
+
+    to {
+        background-color: lightpink;
+        left: 0px;
+        top: 200px;
+    }
+}
+
+div.headnav {
+    background-color: antiquewhite;
+    padding: 20px;
+    height:40%;
+}
+
+
+/*About CSS*/
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+.about {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: rosybrown;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .about h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }x
+
+    .about p {
+        font-size:30px;
+        line-height: 1.6;
+    }
+
+    .about ul {
+        list-style: disc;
+        margin-left: 30px;
+    }
+
+/*Footer CSS*/
+
+footer {
+   
+   position: absolute;
+   width: 100%;
+    bottom : 0; /* Stick the footer to the bottom */
+   background-color: rosybrown;
+    text-align: center;
+}
+
+    footer p {
+        font-size: 26px;
+        color: black;
+    }
+
+    footer ul {
+        list-style: none;
+    }
+
+        footer ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+            footer ul li a {
+                color: black;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                footer ul li a:hover {
+                    color: #0074D9;
+                }
